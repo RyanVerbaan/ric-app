@@ -1,0 +1,23 @@
+
+table,  {
+
+	/*border: 1px solid;*/
+	/*border-color: black;*/
+	border-collapse: collapse;
+	
+}
+
+th, td {
+	border: 1px solid #dee2e6;
+	padding: .5em;
+	text-align: left;
+	
+}
+
+caption {
+	caption-side: top;
+	text-align: left;
+}
+table tr:nth-child(odd) {
+    background-color: lightgrey;
+}

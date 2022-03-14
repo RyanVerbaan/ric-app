@@ -11,7 +11,8 @@ def home():
 def result():
     if request.method == "POST":
         result = request.form
-        return render_template("Result.html", result=result)
+        pak = result['pak']
+        return render_template("Result.html", result=result, pak=pak)
 
 @app.route("/wonderland", methods=["POST", "GET"])
 def wonderland():
@@ -21,3 +22,4 @@ def wonderland():
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port='8000', debug=True)
     #app.run(debug=True)
+

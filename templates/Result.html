@@ -6,25 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Doc</title>         <!--This give the title on top of the tab -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/main3.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Resultcss.css')}}">
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <nav>
-                <ul class="show-desktop" id="nav">
-                    <img src="{{url_for('static', filename='images/ham.svg')}}" alt="toggle menu" class="menu" id="menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Wonderland</a></li>
-                </ul>
-            </nav>
-        </header>
-        <h1>Home Page</h1>
+        <h1>Results Page</h1>
 
-        <section>
-            {% print(result) %}
-        </section>
+        <table>
+            <thead>
+                <caption>Results table</caption>
+                <tr>    <!-- Header -->
+                    <th>Row</th>
+                    <th>Gevraagd</th>
+                    <th>Uitkomst</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Voorraad kannen</td>
+                    <td>Result Voorraad kannen</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Voorraad pakken</td>
+                    <td>Result Voorraad pakken</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Besteld kannen</td>
+                    <td>Result besteld kannen</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Besteld pakken</td>
+                    <td>Result besteld pakken</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Gemiddelde verkoop kannen</td>
+                    <td>Result Gemiddelde verkoop kannen</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>Gemiddelde verkoop pakken</td>
+                    <td>Result Gemiddelde verkoop pakken</td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td>Huidige voorraad kannen</td>
+                    <td>Result Huidige voorraad kannen</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>Huidige voorraad pakken</td>
+                    <td>Result Huidige voorraad pakken</td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td>Advies bestellen kannen</td>
+                    <td>Result Advies bestellen kannen</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td>Advies bestellen pakken</td>
+                    <td>Result Advies bestellen pakken</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     
