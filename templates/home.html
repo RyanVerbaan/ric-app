@@ -1,15 +1,20 @@
-<!doctype html>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-{% block title %}Home Page{% endblock %}
-{% block content %}
-<form action="#" method="post">
-	<p>Name:</p>
-	<p><input type="text" name="nm" /></p>
-	<p><input type="submit" value="submit"/></p>
-</form>
-{% endblock %}
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+{% include "Index.html" %}
+<html>
+<body>
+    <div class="container">
+        <h1>Home Page</h1>
+        <section>
+            <form action="/result" method="post">
+                <p>Voorraad kannen: &emsp; <input type="number" name="kan"/></p>
+                <p>Voorraad pakken: &emsp; <input type="number" name="p"/></p>
+                <p>Besteld kannen: &emsp; <input type="number" name="bestkan"/></p>
+                <p>Besteld pakken: &emsp; <input type="number" name="bestpak"/></p>
+                <p>Gemiddelde verkoop kannen: &emsp; <input type="number" name="gemverkan"/></p>
+                <p>Gemiddelde verkoop pakken: &emsp; <input type="number" name="gemverpak"/></p>
+                <input type="submit" value="submit"/>
+            </form>
+        </section>
+    </div>  
+</body>
+</html>

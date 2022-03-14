@@ -4,15 +4,19 @@ app = Flask(__name__)
 
 @app.route("/", methods=["POST", "GET"])
 def home():
-    #if request.method == "POST":
-        #user = request.form["nm"]
-        #return redirect(url_for("user", usr=user))
-    #else:
-    return render_template("halt.html")
+    return render_template("Home.html")
 
-# @app.route("/<usr>")
-# def user(usr):
-#     return f"<h1>{usr}</h1>"
+
+@app.route("/result", methods=["POST", "GET"])
+def result():
+    if request.method == "POST":
+        result = request.form
+        return render_template("Result.html", result=result)
+
+@app.route("/wonderland", methods=["POST", "GET"])
+def wonderland():
+    return render_template("Wonderland.html")
+
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port='8000', debug=True)
