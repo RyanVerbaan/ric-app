@@ -19,10 +19,6 @@ ul {
 	text-align: left;
 }
 
-section {
-
-}
-
 header {
 	display: flex;
 	justify-content: space-between;
@@ -31,7 +27,7 @@ header {
 .menu {
 	width: 100;
 	padding: 1.7em 1em;
-	background: rgb(49, 55, 59); /*Burger menu*/
+	background: rgb(49, 55, 59);
 }
 
 .menu:hover {
@@ -40,7 +36,7 @@ header {
 
 .show-desktop {
 	width: 100%;
-	background: rgb(40, 41, 44); /*Left portion of menu*/
+	background: rgb(40, 41, 44);
 }
 
 nav ul {

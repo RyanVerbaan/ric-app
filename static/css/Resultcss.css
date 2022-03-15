@@ -1,23 +1,33 @@
 
 table,  {
-
-	/*border: 1px solid;*/
-	/*border-color: black;*/
 	border-collapse: collapse;
-	
 }
+
 
 th, td {
-	border: 1px solid #dee2e6;
 	padding: .5em;
 	text-align: left;
-	
 }
 
-caption {
-	caption-side: top;
-	text-align: left;
+td {
+	border-bottom: 1px solid black;
 }
-table tr:nth-child(odd) {
+
+th {
+	border-bottom-style: double;
+	background-color: white;
+}
+
+.info tr:nth-child(odd) {
     background-color: lightgrey;
+}
+
+
+.whitespace {
+    background-color: white;
+    height: 1.5em;
+}
+
+tfoot tr:nth-child(odd) {
+	background-color: lightgrey;
 }
