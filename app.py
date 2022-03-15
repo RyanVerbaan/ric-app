@@ -31,6 +31,7 @@ def DoNothing():
     pass
 
 @app.route("/", methods=["POST", "GET"])
+@app.route("/home", methods=["POST", "GET"])
 def home():
     return render_template("Home.html")
 
