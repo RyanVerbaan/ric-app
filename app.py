@@ -1,6 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates/')
 
 def calculation(init_data):
     vrd_kan = init_data["vrd_kan"]
@@ -31,7 +31,6 @@ def DoNothing():
     pass
 
 @app.route("/", methods=["POST", "GET"])
-@app.route("/home", methods=["POST", "GET"])
 def home():
     return render_template("Home.html")
 
@@ -63,6 +62,6 @@ def wonderland():
 
 
 if __name__ == "__main__":
-    #app.run(host='127.0.0.1', port='8000', debug=True)
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port='8000', debug=True)
+    #app.run(debug=True)
 
