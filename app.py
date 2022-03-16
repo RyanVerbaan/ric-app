@@ -33,7 +33,7 @@ def DoNothing():
 @app.route("/", methods=["POST", "GET"])
 def home():
     return fl.render_template("Home.html")
-
+    return fl.render_template(fl.url_for('templates', filename='templates/Home.html'))
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
@@ -62,7 +62,7 @@ def wonderland():
 
 
 if __name__ == "__main__":
-    #app.run(host='127.0.0.1', port='8000', debug=True)
-    app.run()
+    app.run(host='127.0.0.1', port='8000', debug=True)
+    #app.run()
     #app.run(debug=True)
 
