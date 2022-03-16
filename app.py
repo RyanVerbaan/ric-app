@@ -32,7 +32,7 @@ def DoNothing():
 
 @app.route("/", methods=["POST", "GET"])
 def home():
-    return fl.render_template("Home.html")
+    #return fl.render_template("Home.html")
     return fl.render_template(fl.url_for('templates', filename='templates/Home.html'))
 
 @app.route("/result", methods=["POST", "GET"])
