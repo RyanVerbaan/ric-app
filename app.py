@@ -1,6 +1,6 @@
 import flask as fl
 
-app = fl.Flask(__name__, template_folder='./templates/')
+app = fl.Flask(__name__, template_folder='../templates/')
 
 def calculation(init_data):
     vrd_kan = init_data["vrd_kan"]
@@ -28,7 +28,7 @@ def calculation(init_data):
 
 @app.route("/")
 def home():
-    return fl.render_template("Home.html")
+    return fl.render_template("Homepage.html")
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
@@ -54,7 +54,7 @@ def wonderland():
 
 
 if __name__ == "__main__":
-    #app.run(host='127.0.0.1', port='8000', debug=True)
+    app.run(host='127.0.0.1', port='8000', debug=True)
     #app.run()
-    app.run(debug=True)
+    #app.run(debug=True)
 
