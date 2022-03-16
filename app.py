@@ -1,6 +1,6 @@
 import flask as fl
 
-app = fl.Flask(__name__)
+app = fl.Flask(__name__, template_folder='templates/')
 
 def calculation(init_data):
     vrd_kan = init_data["vrd_kan"]
@@ -24,16 +24,11 @@ def calculation(init_data):
         "best_kan": best_kan,
         "best_pak": best_pak
     }
-
     return exit_data
 
-def DoNothing():
-    pass
-
-@app.route("/", methods=["POST", "GET"])
+@app.route("/")
 def home():
-    #return fl.render_template("Home.html")
-    return fl.render_template(fl.url_for('templates', filename='templates/Home.html'))
+    return fl.render_template("Home.html")
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
@@ -50,19 +45,16 @@ def result():
             "gem_ver_pak_zo": int(result["gem_ver_pak_zo"]),
         }
         updated_milk_data = calculation(milk_data)
-        return fl.render_template("Result.html",
-                                input=milk_data,
-                                result=updated_milk_data,
-                                )
+        return fl.render_template("Result.html", input=milk_data, result=updated_milk_data)
 
 
-@app.route("/wonderland", methods=["POST", "GET"])
+@app.route("/wonderland")
 def wonderland():
     return fl.render_template("Wonderland.html")
 
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1', port='8000', debug=True)
-    #app.run()
+    #app.run(host='127.0.0.1', port='8000', debug=True)
+    app.run()
     #app.run(debug=True)
 
