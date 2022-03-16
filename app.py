@@ -1,6 +1,6 @@
-from flask import Flask, redirect, url_for, render_template, request
+import flask as fl
 
-app = Flask(__name__)
+app = fl.Flask(__name__)
 
 def calculation(init_data):
     vrd_kan = init_data["vrd_kan"]
@@ -32,13 +32,13 @@ def DoNothing():
 
 @app.route("/", methods=["POST", "GET"])
 def home():
-    return render_template("templates/Home.html")
+    return fl.render_template("Home.html")
 
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
-    if request.method == "POST":
-        result = request.form
+    if fl.request.method == "POST":
+        result = fl.request.form
         milk_data = {
             "vrd_kan": int(result["vrd_kan"]),
             "vrd_pak": int(result["vrd_pak"]),
@@ -50,7 +50,7 @@ def result():
             "gem_ver_pak_zo": int(result["gem_ver_pak_zo"]),
         }
         updated_milk_data = calculation(milk_data)
-        return render_template("Result.html",
+        return fl.render_template("Result.html",
                                 input=milk_data,
                                 result=updated_milk_data,
                                 )
@@ -58,10 +58,11 @@ def result():
 
 @app.route("/wonderland", methods=["POST", "GET"])
 def wonderland():
-    return render_template("Wonderland.html")
+    return fl.render_template("Wonderland.html")
 
 
 if __name__ == "__main__":
     #app.run(host='127.0.0.1', port='8000', debug=True)
-    app.run(debug=True)
+    app.run()
+    #app.run(debug=True)
 

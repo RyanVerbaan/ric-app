@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% include "Index.html" %}
+<html>
+<head>
+    <title>Home</title>         <!--This give the title on top of the tab -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Homecss.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Home Page</h1>
+        <section>
+            <form action="/result" method="post">
+                <p>Voorraad kannen: &emsp; <input type="number" name="vrd_kan" required></p>
+                <p>Voorraad pakken: &emsp; <input type="number" name="vrd_pak" required></p>
+                <p>Besteld kannen: &emsp; <input type="number" name="best_kan" required></p>
+                <p>Besteld pakken: &emsp; <input type="number" name="best_pak" required></p>
+                <p>Gemiddelde verkoop kannen za: &emsp; <input type="number" name="gem_ver_kan_za" required></p>
+                <p>Gemiddelde verkoop kannen zo: &emsp; <input type="number" name="gem_ver_kan_zo" required></p>
+                <p>Gemiddelde verkoop pakken za: &emsp; <input type="number" name="gem_ver_pak_za" required></p>
+                <p>Gemiddelde verkoop pakken zo: &emsp; <input type="number" name="gem_ver_pak_zo" required></p>
+                <input type="submit" value="submit"/>
+            </form>
+        </section>
+    </div>  
+</body>
+</html>
