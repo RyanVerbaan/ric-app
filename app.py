@@ -32,7 +32,7 @@ def DoNothing():
 
 @app.route("/", methods=["POST", "GET"])
 def home():
-    return render_template("template/Home.html")
+    return render_template("templates/Home.html")
 
 
 @app.route("/result", methods=["POST", "GET"])
