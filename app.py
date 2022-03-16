@@ -1,6 +1,7 @@
 import flask as fl
 
-app = fl.Flask(__name__, template_folder='../templates/')
+#app = fl.Flask(__name__, template_folder='./Templates/')
+app = fl.Flask(__name__)
 
 def calculation(init_data):
     vrd_kan = init_data["vrd_kan"]
