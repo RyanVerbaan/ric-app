@@ -12,7 +12,6 @@
         <table>
             <thead>
                 <tr>    <!-- Header -->
-                    <th>Row</th>
                     <th></th>
                     <th>Ingevuld</th>
                     <th>Eenheid</th>
@@ -21,56 +20,48 @@
             
             <tbody class="info">
                 <tr>
-                    <td>1</td>
                     <td>Voorraad kannen</td>
                     <td>{% print input["vrd_kan"] %}</td>
                     <td>[ric]</td>
                 </tr>
 
                 <tr>
-                    <td>2</td>
                     <td>Voorraad pakken</td>
                     <td>{% print input["vrd_pak"] %}</td>
                     <td>[ric]</td>
                 </tr>
 
                 <tr>
-                    <td>3</td>
                     <td>Besteld kannen</td>
                     <td>{% print input["best_kan"] %}</td>
                     <td>[ric]</td>
                 </tr>
 
                 <tr>
-                    <td>4</td>
                     <td>Besteld pakken</td>
                     <td>{% print input["best_pak"] %}</td>
                     <td>[ric]</td>
                 </tr>
 
                 <tr>
-                    <td>5</td>
                     <td>Gemiddelde verkoop kannen za</td>
                     <td>{% print input["gem_ver_kan_za"] %}</td>
                     <td>[kannen]</td>
                 </tr>
 
                 <tr>
-                    <td>6</td>
                     <td>Gemiddelde verkoop kannen zo</td>
                     <td>{% print input["gem_ver_kan_zo"] %}</td>
                     <td>[kannen]</td>
                 </tr>
 
                 <tr>
-                    <td>7</td>
                     <td>Gemiddelde verkoop pakken za</td>
                     <td>{% print input["gem_ver_pak_za"] %}</td>
                     <td>[pakken]</td>
                 </tr>
 
                  <tr>
-                    <td>8</td>
                     <td>Gemiddelde verkoop pakken zo</td>
                     <td>{% print input["gem_ver_pak_zo"] %}</td>
                     <td>[pakken]</td>
@@ -81,36 +72,31 @@
             <tbody class="whitespace">
                 <tr>
                     <th></th>
-                    <th></th>
                     <th>Uitkomst</th>
                     <th>Eenheid</th>
                 </tr>
             </tbody>
 
-            <tfoot>
+            <tfoot class="foot">
                 <tr>
-                    <td>7</td>
                     <td>Huidige voorraad kannen</td>
                     <td>{% print result["Huidige_vrd_kan"] %}</td>
                     <td>[kannen]</td>
                 </tr>
 
                 <tr>
-                    <td>8</td>
                     <td>Huidige voorraad pakken</td>
                     <td>{% print result["Huidige_vrd_pak"] %}</td>
                     <td>[pakken]</td>
                 </tr>
 
                 <tr>
-                    <td>9</td>
                     <td>Advies bestellen kannen</td>
                     <td>{% print result["best_kan"] %}</td>
                     <td>[ric]</td>
                 </tr>
 
                 <tr>
-                    <td>10</td>
                     <td>Advies bestellen pakken</td>
                     <td>{% print result["best_pak"] %}</td>
                     <td>[ric]</td>
@@ -120,8 +106,5 @@
         </table>
     </div>
 
-    <p>{% print input %}</p>
-    <p>{% print result %}</p>
-    
 </body>
 </html>

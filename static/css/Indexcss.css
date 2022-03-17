@@ -2,9 +2,10 @@
 
 
 body { /* This one is inhereted by all */
-	margin: 0em;
+	margin: 0;
 	background: white;
 	font-family: 'Montserrat';
+	text-align: left;
 }
 
 
@@ -20,8 +21,7 @@ ul {
 }
 
 .container {
-	text-align: left;
-	padding-left: .4em;
+	padding: 0em 0.5em;
 }
 
 .hide-mobile {
@@ -35,7 +35,8 @@ header {
 
 .menu {
 	width: 25px;
-	margin-top: 30%;
+	margin-top: 70%;
+	margin-left: 50%;
 }
 
 nav ul {
@@ -48,7 +49,7 @@ nav ul {
 	height: 100%;
 	z-index: 5;
 	padding-top: 2em;
-	padding-left: .5em;
+	padding-left: 1em;
 }
 
 

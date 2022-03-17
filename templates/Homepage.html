@@ -7,18 +7,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Home Page</h1>
+        <h1 class="titlehome">Home Page</h1>
         <section>
-            <form action="/result" method="post">
-                <p>Voorraad kannen: &emsp; <input type="number" name="vrd_kan" required></p>
-                <p>Voorraad pakken: &emsp; <input type="number" name="vrd_pak" required></p>
-                <p>Besteld kannen: &emsp; <input type="number" name="best_kan" required></p>
-                <p>Besteld pakken: &emsp; <input type="number" name="best_pak" required></p>
-                <p>Gemiddelde verkoop kannen za: &emsp; <input type="number" name="gem_ver_kan_za" required></p>
-                <p>Gemiddelde verkoop kannen zo: &emsp; <input type="number" name="gem_ver_kan_zo" required></p>
-                <p>Gemiddelde verkoop pakken za: &emsp; <input type="number" name="gem_ver_pak_za" required></p>
-                <p>Gemiddelde verkoop pakken zo: &emsp; <input type="number" name="gem_ver_pak_zo" required></p>
-                <input type="submit" value="submit"/>
+            <form action="/result" method="post", class="form">
+                <p>Voorraad kannen: <br>  &emsp; <input type="number" name="vrd_kan" required></p>
+                <p>Voorraad pakken: <br>  &emsp; <input type="number" name="vrd_pak" required></p>
+                <p>Besteld kannen: <br>  &emsp; <input type="number" name="best_kan" required></p>
+                <p>Besteld pakken: <br>  &emsp; <input type="number" name="best_pak" required></p>
+                <p>Gemiddelde verkoop kannen za: <br>  &emsp; <input type="number" name="gem_ver_kan_za" required></p>
+                <p>Gemiddelde verkoop kannen zo: <br>  &emsp; <input type="number" name="gem_ver_kan_zo" required></p>
+                <p>Gemiddelde verkoop pakken za: <br>  &emsp; <input type="number" name="gem_ver_pak_za" required></p>
+                <p>Gemiddelde verkoop pakken zo: <br> &emsp; <input type="number" name="gem_ver_pak_zo" required></p>
+                <input type="submit" value="submit" class="sbmt-btn" />
             </form>
         </section>
     </div>  
