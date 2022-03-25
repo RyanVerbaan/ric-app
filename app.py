@@ -36,8 +36,8 @@ def result():
     if fl.request.method == "POST":
         result = fl.request.form
         milk_data = {
-            "vrd_kan": int(result["vrd_kan"]),
-            "vrd_pak": int(result["vrd_pak"]),
+            "vrd_kan": float(result["vrd_kan"]),
+            "vrd_pak": float(result["vrd_pak"]),
             "best_kan": int(result["best_kan"]),
             "best_pak": int(result["best_pak"]),
             "gem_ver_kan_za": int(result["gem_ver_kan_za"]),
