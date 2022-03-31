@@ -1,8 +1,6 @@
 .titlehome {
-	padding: 0;
+	padding-top: 0;
 	margin: 0;
-	margin-top: 0.5em;
-	margin-left: 1em;
 }
 
 .form {
@@ -13,4 +11,11 @@
 	margin-top: 1em;
 	width: 100px;
 	height: 50px;
+}
+
+@media only screen and (min-width: 650px) {
+	.titlehome {
+		padding-top: 1em;
+	}
+
 }

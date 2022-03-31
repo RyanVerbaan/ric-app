@@ -2,109 +2,91 @@
 {% include "Index.html" %}
 <html>
 <head>
-    <title>Result</title>         <!--This give the title on top of the tab -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/Resultcss.css')}}">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Results Page</h1>
-        <table>
-            <thead>
-                <tr>    <!-- Header -->
-                    <th></th>
-                    <th>Ingevuld</th>
-                    <th>Eenheid</th>
-                </tr>
-            </thead>
-            
-            <tbody class="info">
-                <tr>
-                    <td>Voorraad kannen</td>
-                    <td>{% print input["vrd_kan"] %}</td>
-                    <td>[ric]</td>
-                </tr>
+    <h1 class="resulttitle">Results Page</h1>
+    <table>
+        <thead>
+            <tr>    <!-- Header -->
+                <th></th>
+                <th>Input</th>
+            </tr>
+        </thead>
+        
+        <tbody class="info">
+            <tr>
+                <td>Voorraad kannen</td>
+                <td>{% print input["vrd_kan"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Voorraad pakken</td>
-                    <td>{% print input["vrd_pak"] %}</td>
-                    <td>[ric]</td>
-                </tr>
+            <tr>
+                <td>Voorraad pakken</td>
+                <td>{% print input["vrd_pak"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Besteld kannen</td>
-                    <td>{% print input["best_kan"] %}</td>
-                    <td>[ric]</td>
-                </tr>
+            <tr>
+                <td>Besteld kannen</td>
+                <td>{% print input["best_kan"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Besteld pakken</td>
-                    <td>{% print input["best_pak"] %}</td>
-                    <td>[ric]</td>
-                </tr>
+            <tr>
+                <td>Besteld pakken</td>
+                <td>{% print input["best_pak"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Gemiddelde verkoop kannen za</td>
-                    <td>{% print input["gem_ver_kan_za"] %}</td>
-                    <td>[kannen]</td>
-                </tr>
+            <tr>
+                <td>Gemiddelde verkoop kannen za</td>
+                <td>{% print input["gem_ver_kan_za"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Gemiddelde verkoop kannen zo</td>
-                    <td>{% print input["gem_ver_kan_zo"] %}</td>
-                    <td>[kannen]</td>
-                </tr>
+            <tr>
+                <td>Gemiddelde verkoop kannen zo</td>
+                <td>{% print input["gem_ver_kan_zo"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Gemiddelde verkoop pakken za</td>
-                    <td>{% print input["gem_ver_pak_za"] %}</td>
-                    <td>[pakken]</td>
-                </tr>
+            <tr>
+                <td>Gemiddelde verkoop pakken za</td>
+                <td>{% print input["gem_ver_pak_za"] %}</td>
+            </tr>
 
-                 <tr>
-                    <td>Gemiddelde verkoop pakken zo</td>
-                    <td>{% print input["gem_ver_pak_zo"] %}</td>
-                    <td>[pakken]</td>
-                </tr>
+             <tr>
+                <td>Gemiddelde verkoop pakken zo</td>
+                <td>{% print input["gem_ver_pak_zo"] %}</td>
+            </tr>
 
-            </tbody>
+        </tbody>
 
-            <tbody class="whitespace">
-                <tr>
-                    <th></th>
-                    <th>Uitkomst</th>
-                    <th>Eenheid</th>
-                </tr>
-            </tbody>
+        <tbody class="whitespace">
+            <tr>
+                <th></th>
+                <th>Results</th>
+            </tr>
+        </tbody>
 
-            <tfoot class="foot">
-                <tr>
-                    <td>Huidige voorraad kannen</td>
-                    <td>{% print result["Huidige_vrd_kan"] %}</td>
-                    <td>[kannen]</td>
-                </tr>
+        <tfoot class="foot">
+            <tr>
+                <td>Huidige voorraad kannen</td>
+                <td>{% print result["Huidige_vrd_kan"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Huidige voorraad pakken</td>
-                    <td>{% print result["Huidige_vrd_pak"] %}</td>
-                    <td>[pakken]</td>
-                </tr>
+            <tr>
+                <td>Huidige voorraad pakken</td>
+                <td>{% print result["Huidige_vrd_pak"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Advies bestellen kannen</td>
-                    <td>{% print result["best_kan"] %}</td>
-                    <td>[ric]</td>
-                </tr>
+            <tr>
+                <td>Advies bestellen kannen</td>
+                <td>{% print result["best_kan"] %}</td>
+            </tr>
 
-                <tr>
-                    <td>Advies bestellen pakken</td>
-                    <td>{% print result["best_pak"] %}</td>
-                    <td>[ric]</td>
-                </tr>
-            </tfoot>
+            <tr>
+                <td>Advies bestellen pakken</td>
+                <td>{% print result["best_pak"] %}</td>
+            </tr>
+        </tfoot>
 
-        </table>
-    </div>
-
+    </table>
 </body>
 </html>

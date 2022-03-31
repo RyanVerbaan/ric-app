@@ -2,25 +2,22 @@
 {% include "Index.html" %}
 <html>
 <head>
-    <title>Home</title>         <!--This give the title on top of the tab -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/Homecss.css')}}">
 </head>
 <body>
-    <div class="container">
-        <h1 class="titlehome">Home Page</h1>
-        <section>
-            <form action="/result" method="post", class="form">
-                <p>Voorraad kannen: <br>  &emsp; <input type="number" step="0.1" name="vrd_kan" required></p>
-                <p>Voorraad pakken: <br>  &emsp; <input type="number" step="0.1" name="vrd_pak" required></p>
-                <p>Besteld kannen: <br>  &emsp; <input type="number" name="best_kan" required></p>
-                <p>Besteld pakken: <br>  &emsp; <input type="number" name="best_pak" required></p>
-                <p>Gemiddelde verkoop kannen za: <br>  &emsp; <input type="number" name="gem_ver_kan_za" required></p>
-                <p>Gemiddelde verkoop kannen zo: <br>  &emsp; <input type="number" name="gem_ver_kan_zo" required></p>
-                <p>Gemiddelde verkoop pakken za: <br>  &emsp; <input type="number" name="gem_ver_pak_za" required></p>
-                <p>Gemiddelde verkoop pakken zo: <br> &emsp; <input type="number" name="gem_ver_pak_zo" required></p>
-                <input type="submit" value="submit" class="sbmt-btn" />
-            </form>
-        </section>
-    </div>  
+    <h1 class="titlehome">Home Page</h1>
+    <section>
+        <form action="/result" method="post", class="form">
+            <p>Voorraad kannen <br>  &emsp; <input type="number" step="0.1" name="vrd_kan" required></p>
+            <p>Voorraad pakken <br>  &emsp; <input type="number" step="0.1" name="vrd_pak" required></p>
+            <p>Bestelde ric'tjes kannen <br>  &emsp; <input type="number" name="best_kan" required></p>
+            <p>Bestelde ric'tjes pakken <br>  &emsp; <input type="number" name="best_pak" required></p>
+            <p>Gemiddelde verkoop kannen za <br>  &emsp; <input type="number" name="gem_ver_kan_za" required></p>
+            <p>Gemiddelde verkoop kannen zo <br>  &emsp; <input type="number" name="gem_ver_kan_zo" required></p>
+            <p>Gemiddelde verkoop pakken za <br>  &emsp; <input type="number" name="gem_ver_pak_za" required></p>
+            <p>Gemiddelde verkoop pakken zo <br> &emsp; <input type="number" name="gem_ver_pak_zo" required></p>
+            <input type="submit" value="submit" class="sbmt-btn" />
+        </form>
+    </section> 
 </body>
 </html>

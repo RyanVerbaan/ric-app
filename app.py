@@ -8,8 +8,13 @@ def calculation(init_data):
     vrd_pak = init_data["vrd_pak"]
     bst_kan = init_data["best_kan"]
     bst_pak = init_data["best_pak"]
-    aantal_kan = 80 * (vrd_kan + bst_kan)
-    aantal_pak = 120 * (vrd_pak + bst_pak)
+    if(vrd_kan >= 10 and vrd_pak >= 10): #If input NOT in ric
+        aantal_kan = 80 *  bst_kan + vrd_kan
+        aantal_pak = 120 * bst_pak + vrd_pak
+
+    else: #if input in RIC
+        aantal_kan = 80 * (vrd_kan + bst_kan)
+        aantal_pak = 120 * (vrd_pak + bst_pak)
     gem_verk_kan_za = init_data["gem_ver_kan_za"]
     gem_verk_kan_zo = init_data["gem_ver_kan_zo"]
     gem_verk_pak_za = init_data["gem_ver_pak_za"]
