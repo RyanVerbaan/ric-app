@@ -20,7 +20,7 @@ th {
 }
 
 .info tr:nth-child(odd) {
-    background-color: rgb(80, 88, 98);
+    background-color: lightgrey;
 }
 
 
@@ -30,7 +30,7 @@ th {
 }
 
 tfoot tr:nth-child(odd) {
-	background-color: rgb(80, 88, 98);
+	background-color: lightgrey;
 }
 .resulttitle {
 	padding: 0;
