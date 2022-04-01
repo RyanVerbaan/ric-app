@@ -49,18 +49,12 @@ def get_time():
         "Day": day,
         "Month_text": month_t,
         "Year": year,
-        "Hour": hour,
-        "Minute": minute,
-        "Second": second
     }
     return Time
 
 @app.route("/")
 def home():
     return fl.render_template("Homepage.html")
-def test():
-    datetime = get_time()
-    return fl.render_template("test.html", datetime=datetime)
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
