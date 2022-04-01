@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% include "Index.html" %}
+<html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/testcss.css')}}">
+</head>
+<body>
+
+    {% print datetime["Day_text"] %}
+    {% print datetime["Day"] %}
+    {% print datetime["Month_text"] %}
+    {% print datetime["Year"] %}
+
+</body>
+
+</html>
+

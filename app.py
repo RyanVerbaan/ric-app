@@ -1,6 +1,6 @@
 import flask as fl
+import datetime as dt
 
-#app = fl.Flask(__name__, template_folder='./Templates/')
 app = fl.Flask(__name__)
 
 def calculation(init_data):
@@ -32,9 +32,35 @@ def calculation(init_data):
     }
     return exit_data
 
+def get_time():
+    time = dt.datetime.now()
+
+    day_t = time.strftime("%A")
+    day = time.strftime("%d")
+    month_t = time.strftime("%B")
+    year = time.strftime("%Y")
+    
+    hour = time.strftime("%H")
+    minute = time.strftime("%M")
+    second = time.strftime("%S")
+
+    Time = {
+        "Day_text": day_t,
+        "Day": day,
+        "Month_text": month_t,
+        "Year": year,
+        "Hour": hour,
+        "Minute": minute,
+        "Second": second
+    }
+    return Time
+
 @app.route("/")
 def home():
     return fl.render_template("Homepage.html")
+def test():
+    datetime = get_time()
+    return fl.render_template("test.html", datetime=datetime)
 
 @app.route("/result", methods=["POST", "GET"])
 def result():
