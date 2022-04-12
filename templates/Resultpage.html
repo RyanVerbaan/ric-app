@@ -1,0 +1,120 @@
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Resultpagecss.css')}}">
+</head>
+{% extends "Base.html" %}
+
+{% block result %}
+<h1 class="resulttitle">Results Page</h1>
+
+<table>
+<h2>Invoer</h2>
+    <thead>
+        <tr>
+            <th>Huidige voorraad</th>
+            <th>Input</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Kannen: </td>
+            <td>{% print input["vrd_kan"] %}</td>
+        </tr>
+        <tr>
+            <td>Pakken: </td>
+            <td>{% print input["vrd_pak"] %}</td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <th>Bestelde voorraad</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Kannen: </td>
+            <td>{% print input["best_kan"] %}</td>
+        </tr>
+        <tr>
+            <td>Pakken: </td>
+            <td>{% print input["best_pak"] %}</td>
+        </tr>
+    </tbody>
+
+    <thead>
+        <tr>
+            <th>Gemiddelde verkoop kannen</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Vandaag: </td>
+            <td>{% print input["gem_ver_kan_va"] %}</td>
+
+        </tr>
+        <tr>
+            <td>Morgen: </td>
+            <td>{% print input["gem_ver_kan_mo"] %}</td>
+        
+    </tbody>
+
+    <thead>
+        <tr>
+            <th colspan="2">Gemiddelde verkoop pakken</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Vandaag: </td>
+            <td>{% print input["gem_ver_pak_va"] %}</td>
+        </tr>
+        <tr>
+            <td>Morgen: </td>
+            <td>{% print input["gem_ver_pak_mo"] %}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <h2>Uitvoer</h2>
+    
+    
+    <thead>
+        <tr>
+            <th>Voorraad morgenavond</th>
+            <th>Results</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>Huidige voorraad kannen</td>
+            <td>{% print result["Huidige_vrd_kan"] %}</td>
+        </tr>
+
+        <tr>
+            <td>Huidige voorraad pakken</td>
+            <td>{% print result["Huidige_vrd_pak"] %}</td>
+        </tr>
+    </tbody>
+    <thead>
+        <tr>
+            <th>Bestel advies</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Advies bestellen kannen</td>
+            <td>{% print result["best_kan"] %}</td>
+        </tr>
+
+        <tr>
+            <td>Advies bestellen pakken</td>
+            <td>{% print result["best_pak"] %}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

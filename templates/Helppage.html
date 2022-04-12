@@ -1,0 +1,70 @@
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Helppagecss.css')}}">
+</head>
+{% extends "Homepage.html" %}
+
+
+{% block titlepage %}
+<h1 class="titlehelppage">Help Page</h1>
+
+
+<p> Deze pagina is bedoeld voor zij die de webapp voor de eerste keer gebruiken of extra uitleg zoeken.</p>
+<p>Hieronder wordt uitgelegd hoe de app werkt.</p>
+{% endblock %}
+
+{% block step1 %}
+
+    <h3>Stap 1: De huidige voorraad</h3>
+    <ol>
+        <li>Tel de huidige voorraad van de kannen ric'tjes of stuks en vul dit in bij "Kannen" onder "Huidige voorraad."</li>
+        <li>Tel de huidige voorraad van de pakken ric'tjes of stuks en vul dit in bij "Pakken" onder "Huidige voorraad."</li>
+    </ol>
+    <p>
+        LET OP!
+        Het is belangrijk dat beide voorraden in de zelfde eenheid inguvuld worden.
+    </p>
+{% endblock %}
+
+{% block step2 %}
+
+    <h3>Stap 2: De bestelde voorraad</h3>
+    <ol>
+        <li>Scan het schapkaartje van de kannen en vul het aantal ric'tjes welke onderweg zijn in bij "Kannen" onder "Bestelde voorraad."</li>
+        <li>Scan het schapkaartje van de pakken en vul het aantal ric'tjes welke onderweg zijn in bij "Pakken" onder "Bestelde voorraad."</li>
+    </ol>
+<p>
+    LET OP! <br> Het is belangrijk dat beide voorraden ric'tjes worden ingevuld.
+</p>
+{% endblock %}
+
+{% block step3 %}
+
+    <h3>Stap 3: De gemiddelde verkoop kannen</h3>
+    <ol>
+        <li>Open de onderstaande ean op de PDA.</li>
+        <li>Neem een grove schatting van de verkoop van de huidige dag van de afgelopen weken en vul dit in bij "Vandaag" onder "Gemiddelde verkoop kannen."</li>
+        <li>Doe dit ook voor de verkoop van morgen. Vul dit in bij "Morgen" onder "Gemiddelde verkoop kannen."</li>
+    </ol>
+<p>
+    LET OP! <br> Het is belangrijk de voorraad in stuks wordt ingevuld.
+</p>
+{% endblock %}
+
+{% block step4 %}
+
+    <h3>Stap 4: De gemiddelde verkoop pakken</h3>
+    <ol>
+        <li>Open de onderstaande ean op de PDA.</li>
+        <li>Neem een grove schatting van de verkoop van de huidige dag van de afgelopen weken en vul dit in bij "Vandaag" onder "Gemiddelde verkoop kannen."</li>
+        <li>Doe dit ook voor de verkoop van morgen. Vul dit in bij "Morgen" onder "Gemiddelde verkoop kannen."</li>
+    </ol>
+<p>
+    LET OP! <br> Het is belangrijk de voorraad in stuks wordt ingevuld.
+</p>
+{% endblock %} 
+
+{% block ending %}
+<p>Klik hieronder op de submit knop om te zien hoeveel je moet bestellen! Je ingevulde gegevens worden ook weergegeven </p>
+
+
+{% endblock %}

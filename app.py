@@ -15,10 +15,10 @@ def calculation(init_data):
     else: #if input in RIC
         aantal_kan = 80 * (vrd_kan + bst_kan)
         aantal_pak = 120 * (vrd_pak + bst_pak)
-    gem_verk_kan_za = init_data["gem_ver_kan_za"]
-    gem_verk_kan_zo = init_data["gem_ver_kan_zo"]
-    gem_verk_pak_za = init_data["gem_ver_pak_za"]
-    gem_verk_pak_zo = init_data["gem_ver_pak_zo"]
+    gem_verk_kan_za = init_data["gem_ver_kan_va"]
+    gem_verk_kan_zo = init_data["gem_ver_kan_mo"]
+    gem_verk_pak_za = init_data["gem_ver_pak_va"]
+    gem_verk_pak_zo = init_data["gem_ver_pak_mo"]
     Huidige_vrd_kan = int(aantal_kan - gem_verk_kan_za - gem_verk_kan_zo)
     Huidige_vrd_pak = int(aantal_pak - gem_verk_pak_za - gem_verk_pak_zo)
     best_kan = int(4 - (Huidige_vrd_kan/80))
@@ -56,6 +56,11 @@ def get_time():
 def home():
     return fl.render_template("Homepage.html")
 
+@app.route("/help")
+def foryou():
+    return fl.render_template("Helppage.html")
+
+
 @app.route("/result", methods=["POST", "GET"])
 def result():
     if fl.request.method == "POST":
@@ -65,13 +70,13 @@ def result():
             "vrd_pak": float(result["vrd_pak"]),
             "best_kan": int(result["best_kan"]),
             "best_pak": int(result["best_pak"]),
-            "gem_ver_kan_za": int(result["gem_ver_kan_za"]),
-            "gem_ver_kan_zo": int(result["gem_ver_kan_zo"]),
-            "gem_ver_pak_za": int(result["gem_ver_pak_za"]),
-            "gem_ver_pak_zo": int(result["gem_ver_pak_zo"]),
+            "gem_ver_kan_va": int(result["gem_ver_kan_va"]),
+            "gem_ver_kan_mo": int(result["gem_ver_kan_mo"]),
+            "gem_ver_pak_va": int(result["gem_ver_pak_va"]),
+            "gem_ver_pak_mo": int(result["gem_ver_pak_mo"]),
         }
         updated_milk_data = calculation(milk_data)
-        return fl.render_template("Result.html", input=milk_data, result=updated_milk_data)
+        return fl.render_template("Resultpage.html", input=milk_data, result=updated_milk_data)
 
 
 @app.route("/wonderland")

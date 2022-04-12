@@ -1,23 +1,101 @@
-<!DOCTYPE html>
-{% include "Index.html" %}
-<html>
 <head>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/Homecss.css')}}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Homepagecss.css')}}">
 </head>
-<body>
-    <h1 class="titlehome">Home Page</h1>
-    <section>
-        <form action="/result" method="post", class="form">
-            <p>Voorraad kannen <br>  &emsp; <input type="number" step="0.1" name="vrd_kan" required></p>
-            <p>Voorraad pakken <br>  &emsp; <input type="number" step="0.1" name="vrd_pak" required></p>
-            <p>Bestelde ric'tjes kannen <br>  &emsp; <input type="number" name="best_kan" required></p>
-            <p>Bestelde ric'tjes pakken <br>  &emsp; <input type="number" name="best_pak" required></p>
-            <p>Gemiddelde verkoop kannen za <br>  &emsp; <input type="number" name="gem_ver_kan_za" required></p>
-            <p>Gemiddelde verkoop kannen zo <br>  &emsp; <input type="number" name="gem_ver_kan_zo" required></p>
-            <p>Gemiddelde verkoop pakken za <br>  &emsp; <input type="number" name="gem_ver_pak_za" required></p>
-            <p>Gemiddelde verkoop pakken zo <br> &emsp; <input type="number" name="gem_ver_pak_zo" required></p>
-            <input type="submit" value="submit" class="sbmt-btn" />
-        </form>
-    </section> 
-</body>
-</html>
+
+{% extends 'Base.html' %}
+
+{% block titlepage %}
+<h1 class="titlehomepage">Home page</h1>
+{% endblock %}
+
+{% block input %}
+<form action="/result" method="post">
+
+<table>
+    <thead>
+        {% block step1 %}{% endblock %}
+        <tr>
+            <th colspan="2">Huidige voorraad</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Kannen: </td>
+            <td><input type="number" step="0.1" name="vrd_kan" required></td>
+        </tr>
+        <tr>
+            <td>Pakken: </td>
+            <td><input type="number" step="0.1" name="vrd_pak" required></td>
+        </tr>
+    </tbody>
+</table>
+
+<table> 
+    <thead>
+        <tr>
+            <th colspan="2">Bestelde voorraad</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% block step2 %}{% endblock %}
+        <tr>
+            <td>Kannen: </td>
+            <td><input type="number" name="best_kan" required></td>
+        </tr>
+        <tr>
+            <td>Pakken: </td>
+            <td><input type="number" name="best_pak" required></td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <thead>
+        {% block step3 %}{% endblock %}
+        <tr>
+            <th colspan="2">Gemiddelde verkoop kannen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Kannen: </td>
+            <td><input type="number" name="gem_ver_kan_va" required></td>
+        </tr>
+        <tr>
+            <td>Pakken: </td>
+            <td><input type="number" name="gem_ver_kan_mo" required></td>
+        </tr>
+            <td>EAN: </td>
+            <td>67649</td>
+        </tr>  
+    </tbody>
+</table>
+
+<table>
+    <thead>
+         {% block step4 %}{% endblock %}
+        <tr>
+            <th colspan="2">Gemiddelde verkoop pakken</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Kannen: </td>
+            <td><input type="number" name="gem_ver_pak_va" required></td>
+        </tr>
+        <tr>
+            <td>Pakken: </td>
+            <td><input type="number" name="gem_ver_pak_mo" required></td>
+        </tr>
+        </tr>
+            <td>EAN: </td>
+            <td>52950</td>
+        </tr>
+    </tbody>
+</table>
+
+{% block ending %}{% endblock %}
+<input type="submit" value="submit" class="sbmt-btn" />
+</form>
+{% endblock %}
