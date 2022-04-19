@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bestel app</title>         <!--This give the title on top of the tab -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/Basecss.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/Basecss - Copy.css')}}">
 </head>
 
 <body>
+<!-- Header -->
     <header>
-        <nav>
+        <nav class="header-nav">
             <a href="#" class="hide-desktop">
             <img src="{{url_for('static', filename='images/ham.svg')}}" alt="toggle menu" class="menu" id="menu">
             </a>
@@ -22,7 +23,8 @@
             </ul>
         </nav>
     </header>
-    <body>
+<!-- Article -->
+    <article>
     {% block titlepage %}
     <!-- Dynamic content -->
     {% endblock %}
@@ -38,9 +40,17 @@
     {% block result %}
     <!-- Dynamic content -->
     {% endblock %}
-    </body>
-    <footer>      
+    </article>
+<!-- Footer -->
+    <footer>
+        <nav class="footer-nav">
+            <ul class="footer-text">
+                <li><a href="/">Support</a></li>
+                <li><a href="/">Reference</a></li>
+            </ul>
+        </nav>
     </footer>
+
 </body>
 
 <script type="text/javascript">
