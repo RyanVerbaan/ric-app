@@ -22,25 +22,28 @@
             </ul>
         </nav>
     </header>
-    <body>
-    {% block titlepage %}
-    <!-- Dynamic content -->
-    {% endblock %}
 
-    {% block input %}
-    <!-- Dynamic content -->
-    {% endblock %}
+    <div>
+        {% block titlepage  %}
+        <!-- Dynamic content -->
+        {% endblock %}
 
-    {% block wonderland %}
-    <!-- Dynamic content -->
-    {% endblock %}
+        {% block input %}
+        <!-- Dynamic content -->
+        {% endblock %}
 
-    {% block result %}
-    <!-- Dynamic content -->
-    {% endblock %}
-    </body>
+        {% block wonderland %}
+        <!-- Dynamic content -->
+        {% endblock %}
+
+        {% block result %}
+        <!-- Dynamic content -->
+        {% endblock %}
+    </div>
+
     <footer>      
     </footer>
+
 </body>
 
 <script type="text/javascript">
@@ -57,5 +60,4 @@
                 e.preventDefault();
             });
 </script>
-
 </html>

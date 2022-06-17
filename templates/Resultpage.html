@@ -3,8 +3,11 @@
 </head>
 {% extends "Base.html" %}
 
+{% block titlepage %}
+<h1 class="titleresultpage">Results Page</h1>
+{% endblock %}
+
 {% block result %}
-<h1 class="resulttitle">Results Page</h1>
 
 <table>
 <h2>Invoer</h2>
@@ -90,29 +93,29 @@
 
     <tbody>
         <tr>
-            <td>Huidige voorraad kannen</td>
+            <td>Kannen:</td>
             <td>{% print result["Huidige_vrd_kan"] %}</td>
         </tr>
 
         <tr>
-            <td>Huidige voorraad pakken</td>
+            <td>Pakken:</td>
             <td>{% print result["Huidige_vrd_pak"] %}</td>
         </tr>
     </tbody>
     <thead>
         <tr>
-            <th>Bestel advies</th>
+            <th>Besteladvies</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Advies bestellen kannen</td>
+            <td>Kannen:</td>
             <td>{% print result["best_kan"] %}</td>
         </tr>
 
         <tr>
-            <td>Advies bestellen pakken</td>
+            <td>Pakken:</td>
             <td>{% print result["best_pak"] %}</td>
         </tr>
     </tbody>

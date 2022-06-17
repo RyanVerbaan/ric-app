@@ -10,19 +10,19 @@ def calculation(init_data):
     bst_pak = init_data["best_pak"]
     if(vrd_kan >= 10 and vrd_pak >= 10): #If input NOT in ric
         aantal_kan = 80 *  bst_kan + vrd_kan
-        aantal_pak = 120 * bst_pak + vrd_pak
+        aantal_pak = 160 * bst_pak + vrd_pak
 
     else: #if input in RIC
         aantal_kan = 80 * (vrd_kan + bst_kan)
-        aantal_pak = 120 * (vrd_pak + bst_pak)
+        aantal_pak = 160 * (vrd_pak + bst_pak)
     gem_verk_kan_za = init_data["gem_ver_kan_va"]
     gem_verk_kan_zo = init_data["gem_ver_kan_mo"]
     gem_verk_pak_za = init_data["gem_ver_pak_va"]
     gem_verk_pak_zo = init_data["gem_ver_pak_mo"]
     Huidige_vrd_kan = int(aantal_kan - gem_verk_kan_za - gem_verk_kan_zo)
     Huidige_vrd_pak = int(aantal_pak - gem_verk_pak_za - gem_verk_pak_zo)
-    best_kan = int(4 - (Huidige_vrd_kan/80))
-    best_pak = int(2 - (Huidige_vrd_pak/120))
+    best_kan = int(3 - (Huidige_vrd_kan/80))
+    best_pak = int(3 - (Huidige_vrd_pak/160))
 
     exit_data = {
         "Huidige_vrd_kan": Huidige_vrd_kan, 
@@ -31,26 +31,6 @@ def calculation(init_data):
         "best_pak": best_pak
     }
     return exit_data
-
-def get_time():
-    time = dt.datetime.now()
-
-    day_t = time.strftime("%A")
-    day = time.strftime("%d")
-    month_t = time.strftime("%B")
-    year = time.strftime("%Y")
-    
-    hour = time.strftime("%H")
-    minute = time.strftime("%M")
-    second = time.strftime("%S")
-
-    Time = {
-        "Day_text": day_t,
-        "Day": day,
-        "Month_text": month_t,
-        "Year": year,
-    }
-    return Time
 
 @app.route("/")
 def home():
